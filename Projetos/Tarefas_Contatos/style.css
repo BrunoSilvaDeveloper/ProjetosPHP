@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.section-index{
+  padding: 50px;
+  height: 150vh;
+}
+
+.home{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.home button {
+  padding: 10px 20px;
+}
+
+h6 {
+  text-align: center;
+}
+
+h6 span {
+  padding: 0 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+.card-3d-wrap {
+  position: relative;
+  width: 90vw;
+  max-width: 100%;
+  height: 60vh;
+  margin-top: 60px;
+}
+
+.card-3d-wrapper {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-front,
+.card-back {
+  width: 80%;
+  height: 100%;
+  background-color: #2a2b38;
+  border-radius: 6px;
+  padding: 0px 20px;	
+}
+
+.card-back{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.adicionar{
+  width: 45vw;
+  height: 520px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.card-adicionar{
+  width: 400px;
+  height: 700px;
+  background-color: #2a2b38;
+  border-radius: 6px;
+  padding: 0px 20px;	
+  margin: 0 auto;
+}
+
+.container-conteudo{
+    width: 100%;
+    height: 80%;
+}
+
+.header-conteudo{
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 20px;
+}
+
+.container-index-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.container-index-adicionar{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container-index-tabela{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: top;
+}
+
+
+/* Estilizando a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: #1F2029;
+  color: white;
+  padding: 12px;
+  text-align: center; /* Centralizando o cabeçalho */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+td, th {
+  padding: 12px;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+tbody td {
+  text-align: left;
+  color: rgb(168, 168, 168);
+  text-align: center;
+}
+
+tbody td button {
+  cursor: pointer;
+}
+
+/* Estilo para ações de botão */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilizando os links de ação */
+a {
+  text-decoration: none;
+}
+
+td::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.container-index-tabela {
+  height: 500px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+.container-index-tabela::-webkit-scrollbar {
+  width: 9px;
+}
+
+.container-index-tabela::-webkit-scrollbar-thumb {
+  background: #007BFF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container-index-tabela::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+
+.form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.form input{
+  width: 360px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px ;
+}
+.form button{
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.container-home button {
+  width: 100px;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.concluida{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio{
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+.radio input{
+  cursor: pointer;
+}
+
+.btn-editar{
+  margin: 10px !important;
+  margin-top: 10px !important;
+}
+
+.container-ver h4{
+  margin: 0px;
+  margin-right: 10px;
+}
+
+.container-ver p{
+  margin: 0px;
+}
+
+.ver-nome{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  margin: 20px 0 ;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.ver-telefone{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  margin: 20px 0 ;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.ver-tarefa{
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+.ver-tarefa p{
+  margin-top: 10px;
+}
+
+.ver-concluida{
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  margin: 20px 0 ;
+}
+
+.ver-tarefa::-webkit-scrollbar {
+  width: 9px;
+}
+
+.ver-tarefa::-webkit-scrollbar-thumb {
+  background: #007BFF;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ver-tarefa::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+
+@media (max-width: 1050px) {
+  .card-front,
+  .card-back {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-front,
+  .card-back {
+    width: 100%;
+  }
+}

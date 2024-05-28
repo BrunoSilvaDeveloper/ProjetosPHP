@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: white;
+    padding: 20px;
+}
+
+
+.grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 30px;
+    
+}
+
+.card{
+    width: 270px;
+    height: 240px; /*240*/
+    background-color: #2a2b38;
+    box-shadow: 0px 0px 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+    transition: all 1.5s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.thumb{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    transition: all 1.5s;
+}
+
+.card1{
+    background-image: url('../Assets/TarefasContatos.jpg');
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    transition: all 1.5s;
+}
+
+.info{
+    width: 250px;
+    height: 0px; 
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.arrow{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.card:hover{
+    width: 270px;
+    height: 500px;
+    background-color: #2a2b38;
+    box-shadow: 0px 0px 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.card:hover .thumb{
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card:hover .info{
+    animation: ScaleInfoShow 1.5s forwards;
+}
+
+.card:not(:hover) .info {
+    animation: ScaleInfoHide 1.5s forwards;
+}
+
+.title{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    opacity: 0;
+    margin-top: 10px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 45%;
+    opacity: 0;
+    overflow: hidden;
+    
+}
+.tecnologies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    margin: 0px 0;
+}
+
+.tecnologies img{
+    height: 35px;
+    margin: 10px;
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    opacity: 0;
+    margin-bottom: 10px;
+}
+
+.actions button{
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.custom-btn {
+    width: 90px;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+
+.btn-2 {
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    border: none;
+  }
+  .btn-2:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-2:hover {
+    box-shadow: inset -2px -2px 2px 0px rgba(255,255,255,.5);
+  }
+  
+
+.actions a{
+    margin: 10px;
+}
+
+.card:hover .title,.card:hover .description, .card:hover .tecnologies, .card:hover .actions{
+    animation: InfoShow 1s linear 0.3s forwards;
+}
+
+.card:not(:hover) .title, .card:not(:hover) .description, .card:not(:hover) .tecnologies, .card:not(:hover) .actions {
+    animation: InfoHide 1s forwards;
+}
+
+.icon {
+    font-size: 12px; /* Tamanho do ícone */
+}
+
+.card:hover .icon {
+    animation: ArrowShow 1.5s forwards;
+}
+
+.card:not(:hover) .icon {
+    animation: ArrowHide 1.5s forwards;
+}
+
+@keyframes ScaleInfoShow{
+    from {
+        opacity: 0;
+        height: 0px;
+      }
+    to {
+        opacity: 1;
+        height: 260px;
+    }
+}
+
+@keyframes ScaleInfoHide{
+    from {
+        opacity: 1;
+        height: 260px;
+      }
+    to {
+        opacity: 0;
+        height: 0px;
+    }
+}
+
+
+@keyframes InfoShow{
+    from {
+        opacity: 0;
+      }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes InfoHide{
+    from {
+        opacity: 1;
+      }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes ArrowShow{
+    from {
+        transform: rotate(-540deg);
+      }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes ArrowHide{
+    from {
+        transform: rotate(0deg);
+      }
+    to {
+        transform: rotate(-540deg);
+    }
+}
