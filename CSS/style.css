@@ -47,6 +47,15 @@ body{
     transition: all 1.5s;
 }
 
+.card2{
+    background-image: url('../Assets/CarrinhoCompras.jpg');
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    transition: all 1.5s;
+}
+
+
 .info{
     width: 250px;
     height: 0px; 

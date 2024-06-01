@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CarrinhoCompra/CSS/style.css">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <div class="home"><a href="../../index.html"><button>Home</button></a></div>
+    <aside id="container-asside">
+        <div class="title-cart">Cart</div>
+        <div class="container-card-cart" id="container-card-cart"></div>
+        <div class="checkout">
+            <div class="total-container">
+                <span class="total-cart">Total</span>
+                <span class="price-total-cart" id="price-total-cart"></span>
+            </div>
+            <div class="check"><button>Checkout</button></div>
+        </div>
+    </aside>
+
+    <div class="page">
+        <div class="pesquisar">
+            <div class="efect-pesquisar">
+                <div class="pesquisar-container">
+                    <input type="text" id="myInput" placeholder="Pesquisar...">
+                    <button onclick="clearInput()"><img src="CarrinhoCompra/assets/sair.png" alt=""></button>
+                    <div class="pesquisar-img"><img src="CarrinhoCompra/assets/pesquisar.png" alt="Pesquisar"></div>
+                </div>
+            </div>
+            <button id="button-pesquisar" >Pesquisar</button>
+        </div>
+        <section id="section"></section>
+    </div>
+    <script src="CarrinhoCompra/Javascript/functions.js"></script>
+</body>
+</html>
