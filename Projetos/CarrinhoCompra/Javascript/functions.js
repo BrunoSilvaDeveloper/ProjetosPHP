@@ -12,7 +12,7 @@ function zerarProduto(produto){
 
 function enviarRequisicao(produto, acao) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "CarrinhoCompra/app/requisicao/requisicao.php", true);
+    xhr.open("POST", "/Projetos/CarrinhoCompra/app/requisicao/requisicao.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -36,7 +36,7 @@ function adicionar(produto, price, quantidade) {
     }
     else{
         
-        var html = '<div class="card-cart" id="'+idProduto+'"><div class="img-cart"><img src="CarrinhoCompra/assets/'+idProduto+'.jpg" alt="'+produto+'"></div><div class="info-cart"><div class="container-cart"><div class="title-product-cart"><p>' + produto + '</p></div><div class="price-quant"><div class="price-cart"><p>$ '+price.toString().replace('.', ',')+'</p></div><div class="quant-cart"><button class="subtrair-cart" onclick="removerProduto(\'' + produto + '\')">-</button><div class="quantidade-cart"><p id="quantidade'+idProduto+'">'+quantidade+'</p></div><button class="adicionar-cart" onclick="adicionarProduto(\'' + produto + '\') ">+</button></div></div></div><div class="action-cart"><button onclick="zerarProduto(\'' + produto + '\')">x</button></div></div></div>';
+        var html = '<div class="card-cart" id="'+idProduto+'"><div class="img-cart"><img src="/Projetos/CarrinhoCompra/assets/'+idProduto+'.webp" alt="'+produto+'"></div><div class="info-cart"><div class="container-cart"><div class="title-product-cart"><p>' + produto + '</p></div><div class="price-quant"><div class="price-cart"><p>$ '+price.toString().replace('.', ',')+'</p></div><div class="quant-cart"><button class="subtrair-cart" onclick="removerProduto(\'' + produto + '\')">-</button><div class="quantidade-cart"><p id="quantidade'+idProduto+'">'+quantidade+'</p></div><button class="adicionar-cart" onclick="adicionarProduto(\'' + produto + '\') ">+</button></div></div></div><div class="action-cart"><button onclick="zerarProduto(\'' + produto + '\')">x</button></div></div></div>';
     
         document.getElementById("container-card-cart").innerHTML += html;
         adicionarProduto(produto);
@@ -46,7 +46,7 @@ function adicionar(produto, price, quantidade) {
 
 function loadCheckout(acao){
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "CarrinhoCompra/app/requisicao/requisicao.php", true);
+    xhr.open("POST", "/Projetos/CarrinhoCompra/app/requisicao/requisicao.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -61,7 +61,7 @@ function loadCheckout(acao){
 
 function loadCart(acao) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "CarrinhoCompra/app/requisicao/requisicao.php", true);
+    xhr.open("POST", "/Projetos/CarrinhoCompra/app/requisicao/requisicao.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -72,7 +72,7 @@ function loadCart(acao) {
                         // var html = '<div id="' + produto + '"><h2>' + produto + '</h2><p id="quantidade' + produto + '" >Quantidade: '+cart[produto]["Quantidade"]+'</p><button onclick="adicionarProduto(\'' + produto + '\')" >Adicionar</button><button onclick="removerProduto(\'' + produto + '\')" >Remover</button></div>';
 
                         var idProduto = produto.replace(/\s+/g, '');
-                        var html = '<div class="card-cart" id="'+idProduto+'"><div class="img-cart"><img src="CarrinhoCompra/assets/'+idProduto+'.jpg" alt="'+produto+'"></div><div class="info-cart"><div class="container-cart"><div class="title-product-cart"><p>' + produto + '</p></div><div class="price-quant"><div class="price-cart"><p>$ '+cart[produto]["Price"].toString().replace('.', ',')+'</p></div><div class="quant-cart"><button class="subtrair-cart" onclick="removerProduto(\'' + produto + '\') ">-</button><div class="quantidade-cart"><p id="quantidade'+idProduto+'">'+cart[produto]["Quantidade"]+'</p></div><button class="adicionar-cart" onclick="adicionarProduto(\'' + produto + '\') ">+</button></div></div></div><div class="action-cart"><button onclick="zerarProduto(\'' + produto + '\')">x</button></div></div></div>';
+                        var html = '<div class="card-cart" id="'+idProduto+'"><div class="img-cart"><img src="/Projetos/CarrinhoCompra/assets/'+idProduto+'.webp" alt="'+produto+'"></div><div class="info-cart"><div class="container-cart"><div class="title-product-cart"><p>' + produto + '</p></div><div class="price-quant"><div class="price-cart"><p>$ '+cart[produto]["Price"].toString().replace('.', ',')+'</p></div><div class="quant-cart"><button class="subtrair-cart" onclick="removerProduto(\'' + produto + '\') ">-</button><div class="quantidade-cart"><p id="quantidade'+idProduto+'">'+cart[produto]["Quantidade"]+'</p></div><button class="adicionar-cart" onclick="adicionarProduto(\'' + produto + '\') ">+</button></div></div></div><div class="action-cart"><button onclick="zerarProduto(\'' + produto + '\')">x</button></div></div></div>';
             
                         document.getElementById("container-card-cart").innerHTML += html;
                         
@@ -89,7 +89,7 @@ function loadCart(acao) {
 
 function loadPage(acao) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "CarrinhoCompra/app/requisicao/requisicao.php", true);
+    xhr.open("POST", "/Projetos/CarrinhoCompra/app/requisicao/requisicao.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -125,7 +125,7 @@ function clearInput() {
 
 function pesquisar(acao, product) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "CarrinhoCompra/app/requisicao/requisicao.php", true);
+    xhr.open("POST", "/Projetos/CarrinhoCompra/app/requisicao/requisicao.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -152,7 +152,7 @@ function createpage(page, action, product = ''){
                 var html = '<div class="card" id="Product'+idProduto+'"><div class="img"> imagem </div><div class="info"><div class="title"><p>'+produto+'</p></div><div class="description"><p>' + page[produto]["Description"] + '</p></div><div class="container"><div class="price"><p>$' + page[produto]["Price"] + '</p></div><div class="action"><button onclick="adicionar(\''+produto+'\', ' + page[produto]["Price"] + ', ' + page[produto]["Quantidade"] + ')">Add to Cart</button></div></div></div></div>'
                 
                 html = html.replace('.', ',');
-                html = html.replace('imagem', '<img src="CarrinhoCompra/assets/'+idProduto+'.jpg" alt="'+produto+'"></img>');
+                html = html.replace('imagem', '<img src="/Projetos/CarrinhoCompra/assets/'+idProduto+'.webp" alt="'+produto+'"></img>');
         
                 document.getElementById("section").innerHTML += html;
             }
@@ -172,7 +172,7 @@ function createpage(page, action, product = ''){
                     var html = '<div class="card" id="Product'+idProduto+'"><div class="img"> imagem </div><div class="info"><div class="title"><p>'+produto+'</p></div><div class="description"><p>' + page[produto]["Description"] + '</p></div><div class="container"><div class="price"><p>$' + page[produto]["Price"] + '</p></div><div class="action"><button onclick="adicionar(\''+produto+'\', ' + page[produto]["Price"] + ', ' + page[produto]["Quantidade"] + ')">Add to Cart</button></div></div></div></div>'
                     
                     html = html.replace('.', ',');
-                    html = html.replace('imagem', '<img src="CarrinhoCompra/assets/'+idProduto+'.jpg" alt="'+produto+'"></img>');
+                    html = html.replace('imagem', '<img src="/Projetos/CarrinhoCompra/assets/'+idProduto+'.webp" alt="'+produto+'"></img>');
         
                     document.getElementById("section").innerHTML += html;   
                 }
